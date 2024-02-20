@@ -12,11 +12,16 @@
 
 @media (max-width:990px) {
 
-    /* header .navbar1 .left form,
-    header .navbar2, */
+    header .navbar2,
     .navbar .right ul li:nth-child(1),
     .navbar .right ul li:nth-child(2) {
         display: none;
+    }
+
+    header,
+    .navbar {
+        height: auto;
+        padding: 10px 0px;
     }
 
     .hero-section {
@@ -63,18 +68,45 @@
     }
 }
 
-@media (max-width:500px) {
-    header , .navbar{
-        height: auto;
+@media (max-width:320px) {
 
-    }
-
+    header,
     .navbar {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .navbar .left,
-    .navbar .right {
+}
+
+
+
+/* for mobile menu  */
+
+
+@media(max-width:990px) {
+    .left .form2 {
         display: none;
+    }
+
+    .openbtn,
+    .closebtn {
+        display: block;
+    }
+
+    .main-header-mobile {
+        display: flex;
+        overflow: hidden;
+
+    }
+
+    .inner-header-mobile {
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        background-color: rgba(211, 211, 211, 1);
+        transition: 0.5s ease;
     }
 }
